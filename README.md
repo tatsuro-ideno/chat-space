@@ -1,24 +1,15 @@
-# README
+create_table :massages do |t|
+    t.text       :body, null:false
+    t.image      :image
+    t.group_id   :integer
+    t.user_id    :integer
+    t.timestamps
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+create_table :users do |t|
+    t.nickname   :string
+    t.email      :string
+    t.password   :string
+    t.group_id   :integer
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+create_table :groups do |t|
+    t.name       :string
