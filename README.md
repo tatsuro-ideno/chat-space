@@ -1,24 +1,47 @@
-# README
+# DB構成
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## テーブル
+- users
+- massages
+- groups
+- group_users
 
-Things you may want to cover:
+##アソシエーション
+- users
+    - has_many :massages
+    - has_many :groups, through :group_users
+    - has_many :group_users
 
-* Ruby version
+- massages
+    - belongs_to :user
+    - belongs_to :group
 
-* System dependencies
+- groups
+    - has_many :users, through :group_users
+    - has_many :group_users
 
-* Configuration
+- group_users
+    - belongs_to :user
+    - belongs_to :group
 
-* Database creation
+## カラム
+- users
+    - devise関連のカラム
+    - name
 
-* Database initialization
+- massages
+    - body
+    - image
+    - group_id
+    - user_id
 
-* How to run the test suite
+- groups
+    - name
 
-* Services (job queues, cache servers, search engines, etc.)
+- group_users
+    - user_id
+    - group_id
 
-* Deployment instructions
 
-* ...
+
+
