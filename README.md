@@ -4,31 +4,30 @@
 - users
 - massages
 - groups
-- user_groups
+- group_users
 
 ##アソシエーション
 - users
     - has_many :massages
-    - has_many :groups, through :user_groups
-    - has_many :user_groups
+    - has_many :groups, through :group_users
+    - has_many :group_users
 
 - massages
     - belongs_to :users
     - belongs_to :groups
-    - has_many   :user_massages
 
 - groups
-    - has_many :users, through :user_groups
+    - has_many :users, through :group_users
+    - has_many :group_users
 
-- user_groups
+- group_users
     - belongs_to :users
     - belongs_to :groups
 
 ## カラム
 - users
     - devise関連のカラム
-    - user_id
-    - group_id
+    - name
 
 - massages
     - body
@@ -39,7 +38,7 @@
 - groups
     - name
 
-- user_groups
+- group_users
     - user_id
     - group_id
 
