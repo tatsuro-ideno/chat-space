@@ -1,15 +1,35 @@
-create_table :massages do |t|
-    t.text       :body, null:false
-    t.image      :image
-    t.group_id   :integer
-    t.user_id    :integer
-    t.timestamps
+# DB構成
 
-create_table :users do |t|
-    t.nickname   :string
-    t.email      :string
-    t.password   :string
-    t.group_id   :integer
+## テーブル
+- users
+- massages
+- groups
 
-create_table :groups do |t|
-    t.name       :string
+##アソシエーション
+- users
+    - has_many :massages
+    - has_many :groups
+
+- massages
+    - belongs_to :users
+
+- groups
+    - has_many :users
+
+## カラム
+- users
+    - devise関連のカラム
+    - user_id
+    - group_id
+
+- massages
+    - body
+    - image
+    - group_id
+    - user_id
+
+- groups
+    - name
+
+
+
