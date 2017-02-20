@@ -13,16 +13,16 @@
     - has_many :group_users
 
 - massages
-    - belongs_to :users
-    - belongs_to :groups
+    - belongs_to :user
+    - belongs_to :group
 
 - groups
     - has_many :users, through :group_users
     - has_many :group_users
 
 - group_users
-    - belongs_to :users
-    - belongs_to :groups
+    - belongs_to :user
+    - belongs_to :group
 
 ## カラム
 - users
