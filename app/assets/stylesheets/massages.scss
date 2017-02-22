@@ -1,0 +1,112 @@
+.chat{
+  background-color: white;
+  width: 80vw;
+  height: 100vh;
+  float:left;
+  &__top{
+    height: 20vh;
+    background-color: white;
+    border-bottom: solid 1px #eeeeee;
+    &--group-name{
+      font-size: 20px;
+      color: #666666;
+      padding-top: 30px;
+      padding-left: 40px;
+      width: 300px;
+      float: left;
+    }
+    .editbutton{
+      border: 2px solid #2E9AFE;
+      background-color: white;
+      color: #2E9AFE;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 40px;
+      margin-right: 40px;
+      float: right;
+    }
+    &--member{
+      font-size: 12px;
+      color: #999999;
+      padding-left: 40px;
+      width: 300px;
+    }
+  }
+  &__middle{
+    height: 60vh;
+    background-color:white;
+    &__name-date-text{
+      padding-top: 46px;
+      padding-left:40px;
+      &--name{
+        font-size: 20px;
+        font-family: bold;
+        color: #434A54;
+      }
+      &--date{
+        font-size: 12px;
+        font-family: bold;
+        color: #999999;
+        padding-left: 10px;
+      }
+      &__text{
+        font-style: bold;
+        font-size: 14px;
+        color: #434A54;
+        padding-top: 10px;
+      }
+    }
+    &__name-date-text2{
+      padding-top: 40px;
+      padding-left: 40px;
+      &--name{
+        font-size: 20px;
+        font-family: bold;
+        color:#434A54;
+      }
+      &--date{
+        font-size: 12px;
+        font-family: bold;
+        color: #999999;
+        padding-left: 10px;
+      }
+      &__text{
+        font-style: bold;
+        font-size: 14px;
+        color: #434A54;
+        padding-top: 10px;
+      }
+    }
+  }
+  &__bottom{
+    background-color: #eeeeee;
+    height: 18.5vh;
+    &__form-send{
+      padding-top: 25px;
+      padding-left: 40px;
+      &--form{
+        height: 5vh;
+        width: 850px;
+        padding-left: 10px;
+        position: relative;
+      }
+      .fa{
+        position:relative;
+        left:-30px;
+
+      }
+      &--send-button{
+        display: inline;
+        border: 2px solid #2E9AFE;
+        background-color: #2E9AFE;
+        color:white;
+        margin-left: 15px;
+        height: 5vh;
+        width:80px;
+      }
+    }
+  }
+}
+
