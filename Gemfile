@@ -55,4 +55,3 @@ gem 'erb2haml'
 gem 'haml-rails'
 gem 'pry-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
-
